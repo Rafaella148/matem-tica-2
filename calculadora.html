@@ -24,6 +24,27 @@
         background-color:aliceblue  ;
        }
     </style>
+    <script>
+        //função para adicionar valor
+        function adicionar(valor){
+            document.getElementById("visor").value += valor;
+        }
+
+        //função para limpar o visor
+        function limpar(){
+            document.getElementById("visor").value = "";
+        }
+
+        //função para calcular
+        function calcular(){
+            var visor =  document.getElementById("visor");
+            try{
+                visor.value = eval(visor.value);
+            }catch(error){
+                visor.value = "erro";
+            }
+        }
+    </script>
  </head>
     <body>
        <input type="text" id="visor">
@@ -56,4 +77,3 @@
         <button class="botaoooo" onclick="calcular()">=</button>
     </body>
 </html>
-
